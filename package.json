@@ -1,0 +1,28 @@
+{
+  "name": "ieee754-binary16-modbus",
+  "version": "1.0.0",
+  "description": "Converts raw modbus integer to IEEE-754 Binary16 Floating Point format",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickjmcd/ieee754-binary16-modbus.git"
+  },
+  "keywords": [
+    "modbus",
+    "binary16",
+    "float16",
+    "ieee754"
+  ],
+  "author": "Patrick McDonagh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickjmcd/ieee754-binary16-modbus/issues"
+  },
+  "homepage": "https://github.com/patrickjmcd/ieee754-binary16-modbus#readme",
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}
