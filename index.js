@@ -6,20 +6,11 @@ var pad = function(start, numChars, padWith){
 var intToFloat16 = function(intToConvert){
   var binRep = pad(intToConvert.toString(2), 16, "0");
   var sign = 1;
-  var fraction;
   if (parseInt(binRep[0]) === 1){
     sign = -1;
   }
   var exponent = parseInt(binRep.substring(1, 6), 2);
-  if (exponent === 30.0){
-    fraction = parseInt("1".concat(binRep.substring(7, 17)), 2);
-  } else {
-    fraction = parseInt(binRep.substring(7, 17), 2);
-  }
-
-  // console.log("Sign: " + sign);
-  // console.log("exponent: " + exponent + " -- " + binRep.substring(1, 6));
-  // console.log("fraction: " + fraction);
+  var fraction = parseInt(binRep.substring(6, 17), 2);
 
   if (exponent === 0){
     return sign * (2 ** -14) * fraction / (2.0 ** 10.0);
